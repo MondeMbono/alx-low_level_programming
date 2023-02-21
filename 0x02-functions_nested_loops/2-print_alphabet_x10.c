@@ -2,7 +2,7 @@
 /**
  * print_alphabet_x10 - prints 10 rows of the alphabet
  * Return: 0
- * This program was written by Imraan ThabangLeeuw
+ * This program was written by Monde Mbono
  */
 void print_alphabet_x10(void)
 {
