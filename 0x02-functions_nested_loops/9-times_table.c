@@ -5,30 +5,36 @@
  * By Monde
  */
 void times_table(void)
-{
-	int h;
-	int y;
-	int res;
-
-	for (h = 0; h <= 9; h++)
 	{
+		int i, j, k;
 
-		for (y = 1; y <= 9; y++)
+
+		for (i = 0; i < 10; i++)
 		{
-			_putchar(',');
-			_putchar(' ');
-			res = h * y;
+			for (j = 0; j < 10; j++)
+			{
+				k = j * i;
+				if (j == 0)
+				{
+					_putchar(k + '0');
+				}
 
-			if (res <= 9)
-			{
-				_putchar(' ');
+
+				if (k < 10 && j != 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+					_putchar(k + '0');
+				} else if (k >= 10)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar((k / 10) + '0');
+					_putchar((k % 10) + '0');
+				}
 			}
-			else
-			{
-				_putchar((res / 10) + '0');
-			}
-			_putchar((res % 10) + '0');
+			_putchar('\n');
 		}
-		_putchar('n');
 	}
 }
